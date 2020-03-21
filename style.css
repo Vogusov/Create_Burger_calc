@@ -17,11 +17,87 @@ h2 {
 }
 
 fieldset {
-  padding: 20px;
+  padding: 20px 30px;
 }
 
 input[type="button"] {
   padding: 10px 15px;
   margin-bottom: 20px;
+  cursor: pointer;
 } 
+
+
+
+
+/* inputs customise */
+
+.option {
+  opacity: 0;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+}
+
+label {
+  position: relative;
+  line-height: 25px;
+  cursor: pointer;
+}
+
+.checkmark {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: #9cc;
+  position: absolute;
+  left: -22px;
+  top: 0px;
+}
+
+.radio-mark {
+  border-radius: 50%;
+}
+
+label:hover .checkmark {
+  background-color: #FFB473;
+}
+
+.checkmark:before {
+  content: "";
+  display: none;
+  position: absolute;  
+}
+
+.checkbox-mark:before {
+  width: 5px;
+  height: 10px;
+  transform: rotate(45deg);
+  border: solid #A64D00;
+  border-width: 0px 5px 5px 0px;
+  top: 0;
+  left: 5px;
+}
+
+.radio-mark:before {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  top: 5px;
+  left: 5px;
+  background-color: #A64D00;
+}
+
+
+
+input:checked + label .checkmark {
+  background-color: #FFB473;
+}
+
+input:checked + label .checkbox-mark:before,
+input:checked + label .radio-mark:before {
+  display: block;  
+}
+
+
+
 
